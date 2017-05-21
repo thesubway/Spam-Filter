@@ -17,7 +17,7 @@ for j in ham1:
     tester=j
         s+=1
             if s==1:
-break
+                break
 tester=tester[3:]
 print(tester)
 cleanString=re.sub('\W+', ' ',tester)
