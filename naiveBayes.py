@@ -2,12 +2,12 @@ import re
 ham1= []
 spam2 =[]
 count = 0;
-with open('file1.py','r') as t:
+with open('SMSSpamCollection','r') as t:
     for a in t:
-    if a[0]=='h':
-        ham1.append(a)
-    elif a[0]=='s':
-        spam2.append(a)
+        if a[0]=='h':
+            ham1.append(a)
+        elif a[0]=='s':
+            spam2.append(a)
 
 
 words=list()
@@ -15,9 +15,9 @@ s =0
 for j in ham1:
     #print(j)
     tester=j
-        s+=1
-            if s==1:
-                cbreak
+    s+=1
+    if s==1:
+        break
 tester=tester[3:]
 print(tester)
 cleanString=re.sub('\W+', ' ',tester)
