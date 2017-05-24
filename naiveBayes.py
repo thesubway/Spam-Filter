@@ -10,19 +10,21 @@ with open('SMSSpamCollection','r') as t:
             spam2.append(a)
 
 
-words=list()
-s =0
-for j in ham1:
-    #print(j)
-    tester=j
-    s+=1
-    if s==1:
-        break
-tester=tester[3:]
-print(tester)
-cleanString=re.sub('\W+', ' ',tester)
-print(cleanString.lower()) #this remove all commas, periods, #,/ and make words in lower case
+def clean(strArr):
+    words = list()
+    s = 0
+    for j in strArr:
+        # print(j)
+        tester = j
+        s += 1
+        if s == 1:
+            break
+    tester = tester[3:]
+    print(tester)
+    cleanString = re.sub('\W+', ' ', tester)
+    print(cleanString.lower())  # this remove all commas, periods, #,/ and make words in lower case
 
+clean(ham1)
 
 """
 for t in spam2:
