@@ -22,7 +22,9 @@ def clean(strArr):
     tester = tester[3:]
     print(tester)
     cleanString = re.sub('\W+', ' ', tester)
-    print(cleanString.lower())  # this remove all commas, periods, #,/ and make words in lower case
+    cleanString = cleanString.lower()
+    print(cleanString)  # this removes all commas, periods, #,/ and make words in lower case
+    # TODO: stem the words:
 
 clean(ham1)
 
